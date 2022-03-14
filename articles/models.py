@@ -6,5 +6,11 @@ class Article(models.Model):
     slug = models.SlugField();
     body = models.TextField();
     date = models.DateTimeField(auto_now_add=True);
-    # add in thumbnail later
+    thumbnail = models.ImageField(default='default.png', blank=True)
     # add in author later
+
+    def __str__(self):
+        return self.title;
+    
+    def snippet(self):
+        return self.body[:50];

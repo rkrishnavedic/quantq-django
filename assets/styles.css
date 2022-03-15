@@ -18,3 +18,246 @@ a, a:hover, a:visited{
     color: rgb(100, 48, 6);
     text-decoration: none;
 }
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper > h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li a{
+    color: rgb(0, 19, 104) !important;
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+nav button{
+    background: none;
+    color: rgb(104, 50, 0);
+    cursor: pointer;
+    border: 0;
+    font-size: 16px;
+}
+
+
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.article{
+    border: 1px solid #013686;;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.article a{
+    text-decoration: none;
+}
+
+.article h2{
+    color: #dadce7;
+    font-size: 1.5em;
+    padding: 5px;
+    background: #013686;
+    text-align: center;
+}
+
+.article p{
+    display: flex;
+    padding: 5px;
+    color: rgb(53, 53, 53);
+}
+
+.article .author{
+    padding: 10px;
+    background: #013686;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #dadce7;
+}
+
+.article .meta{
+    font-size:11px;
+}
+
+.article-detail .article{
+    padding: 0;
+}
+
+.article-detail  .article img{
+    max-width: 100%;
+}
+
+.article-detail  .article h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em
+}
+
+.article-detail .article h3{
+    text-align: center;
+}
+
+.article-detail  .article p{
+    margin: 10px 20px
+}
+
+.site-form{
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px;
+}
+.site-form *{
+    font-family: 'Poppins',sans-serif;
+    color: #2b2b2b;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.site-form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.site-form label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.site-form input{
+    display: block;
+    width: 96.6%;
+    background-color: rgba(147, 155, 158, 0.185);
+    padding: 15px 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: rgb(29, 73, 99);
+    font-size: 11px;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+    color: #FF5722
+}
+
+.errorlist{
+    padding: 0;
+}
+
+
+.site-form input[type=submit]{
+    display: block;
+    background-color: #2a2d5a;
+    color: #bdbad1;
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-options{
+    text-align: center;
+}
+
+.auth-options a{
+    text-decoration: none;
+}
+
+.article-form-container{
+    padding: 10px;
+}
+
+.article-form{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 5px;
+    align-items: baseline;
+}
+
+.article-form label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.article-form input{
+    padding: 3px;
+}
+
+.article-form textarea{
+    padding: 3px;
+}
+
+.article-form input[type=submit]{
+    margin-top: 20px;
+    border: none;
+    background-color: #2a2d5a;
+    color: #f0eff7;
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.info{
+    font-size: 10px;
+}

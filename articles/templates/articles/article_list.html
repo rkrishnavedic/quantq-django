@@ -4,11 +4,17 @@
 <h1>Article List</h1>
 <div class="articles">
     {% for article in articles %}
-        <div class="article">
-            <h2><a href="{{article.slug}}">{{article.title}}</a></h2>
-            <p>{{article.snippet }}...</p>
-            <p>{{article.date}}</p>
-        </div>
+        <a href="{{article.slug}}">
+            <div class="article">
+           
+                <h2>{{article.title}}</h2>
+                <p>{{article.snippet }}...</p>
+                <div class="meta">
+                    <p>{{article.date}}</p>
+                    <p class="author">@{{article.author.username}}</p>
+                </div>
+            </div>
+        </a>
     {% endfor %}
 </div>
 

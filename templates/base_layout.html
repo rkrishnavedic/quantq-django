@@ -10,8 +10,32 @@
     <title>Document</title>
 </head>
 <body>
+    <header class="wrapper">
+        <h1><a href="{% url 'home' %}"><img height="50px" src="{% static 'logo.png' %}"/></a></h1>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                <li>
+                    <form class="logout-link" action="{%url 'accounts:logout'%}" method="POST">
+                        {%csrf_token%}
+                        <button type="submit" style="display: flex;">Logout <p class="info">[{{user.username}}]</p></button>
+                    </form>
+                </li>
+                <li>
+                    <a href="{% url 'articles:create' %}" class="highlight">New Article</a>
+                </li>
+                {% else %}
+                <li>
+                    <a href="{% url 'accounts:login' %}">Login</a>
+                </li>
+                <li>
+                    <a href="{% url 'accounts:signup' %}">Signup</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
     <div class="wrapper">
-        <h1><a href="{% url 'articles:list' %}">List</a></h1>
         {% block content %}
         {% endblock %}
     </div>

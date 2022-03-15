@@ -1,0 +1,22 @@
+{% extends "base_layout.html" %}
+{%load static%}
+{% block content %}
+
+<div class="article-detail">
+    <div class="article-form-container">
+        <h2>Create New Article</h2>
+        <form class="article-form" action="create" method="POST" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form}}
+            <input type="submit" value="create">
+        </form>
+    </div>
+</div>
+<script src="{%static 'slugify.js'%}"></script>
+<script type="text/javascript">
+    tinyMCE.init({
+            mode: "textareas",
+            theme: "simple"
+    });
+</script>
+{% endblock %}

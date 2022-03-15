@@ -5,7 +5,7 @@
 <form class="site-form" action="signup" method="POST">
     <h1>SignUp</h1>
     {%csrf_token%}
-    {{form}}
+    {{form.as_table}}
     <input type="submit" value="Signup">
     <p class="auth-options"><a href="{% url 'accounts:login'%}">Already have account?</a></p>
 </form>

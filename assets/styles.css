@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 body{
     background-color: lightblue;
     background-image: url(/static/bg.webp);
@@ -6,7 +7,7 @@ body{
 }
 
 body *{
-    font-family: Ubuntu;
+    font-family: Fredoka;
 }
 
 h1, h2, h3, h4, h5{
@@ -15,8 +16,8 @@ h1, h2, h3, h4, h5{
 }
 
 a, a:hover, a:visited{
-    color: rgb(100, 48, 6);
-    text-decoration: none;
+    color: rgb(15, 85, 151);
+    text-decoration: underline;
 }
 
 .wrapper{
@@ -31,84 +32,77 @@ div.wrapper > h1{
 }
 
 header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 0;
 }
 
 nav{
-    justify-self: end;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 nav li a{
     color: rgb(0, 19, 104) !important;
     cursor: pointer;
-    border: 0;
-    font-size: 16px;
+    text-decoration: none;
+    font-size: 13px;
 }
 
 nav li{
     display: inline-block;
     list-style-type: none;
     margin-left: 20px;
+    border-radius: 5px;
+    padding: 4px;
 }
 
 nav button{
     background: none;
-    color: rgb(104, 50, 0);
+    color: rgb(167, 39, 0);
     cursor: pointer;
     border: 0;
-    font-size: 16px;
+    font-size: 13px;
+}
+
+nav button:hover{
+    text-decoration: underline;
 }
 
 
 .articles{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 30px;
+    width: 100%;
 }
 
-.article{
-    border: 1px solid #013686;;
-    position: relative;
-    padding-bottom: 40px;
-}
-
-.article a{
-    text-decoration: none;
-}
-
-.article h2{
-    color: #dadce7;
-    font-size: 1.5em;
-    padding: 5px;
-    background: #013686;
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+	margin:50px auto;
     text-align: center;
-}
+	}
 
-.article p{
-    display: flex;
-    padding: 5px;
-    color: rgb(53, 53, 53);
-}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgba(83, 83, 83, 0.123); 
+	}
 
-.article .author{
-    padding: 10px;
-    background: #013686;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    font-size: 14px;
-    color: #dadce7;
-}
+th { 
+	background: #7f909b94; 
+	font-weight: bold; 
+	}
 
-.article .meta{
-    font-size:11px;
-}
+td, th { 
+	padding: 5px; 
+	border: 1px solid rgb(172, 172, 172); 
+	text-align: left; 
+	font-size: 14px;
+	}
 
 .article-detail .article{
     padding: 0;
+
 }
 
 .article-detail  .article img{
@@ -141,7 +135,7 @@ nav button{
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px;
+    padding: 20px;
 }
 .site-form *{
     font-family: 'Poppins',sans-serif;
@@ -151,7 +145,7 @@ nav button{
     border: none;
 }
 .site-form h3{
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
@@ -159,15 +153,15 @@ nav button{
 
 .site-form label{
     display: block;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 14px;
     font-weight: 500;
 }
 .site-form input{
     display: block;
     width: 96.6%;
     background-color: rgba(147, 155, 158, 0.185);
-    padding: 15px 0;
+    padding: 10px 0;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 3px;

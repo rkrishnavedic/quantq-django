@@ -3,19 +3,35 @@
 {% block content %}
 <h1>Article List</h1>
 <div class="articles">
+    <table>
+        <thead>
+            <th>Last Updated</th>
+            <th>Title</th>
+            <th>Body Snippet</th>
+            <th>Author</th>
+        </thead>
     {% for article in articles %}
+        <tr>
+            <td>{{article.date}}</td>
+            <td><a href="{{article.slug}}">{{article.title}}</a></td>
+            <td>{{article.snippet}}</td>
+            <td>@{{article.author.username}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <!-- {% for article in articles %}
         <a href="{{article.slug}}">
             <div class="article">
            
                 <h2>{{article.title}}</h2>
-                <p>{{article.snippet }}...</p>
+                <p>{{article.snippet}}...</p>
                 <div class="meta">
                     <p>{{article.date}}</p>
                     <p class="author">@{{article.author.username}}</p>
                 </div>
             </div>
         </a>
-    {% endfor %}
+    {% endfor %} -->
 </div>
 
 {% endblock %}

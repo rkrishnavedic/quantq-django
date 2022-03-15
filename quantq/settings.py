@@ -145,15 +145,16 @@ TINYMCE_DEFAULT_CONFIG = {
             visualchars code fullscreen autolink lists  charmap print  hr
             anchor pagebreak
             ''',
+    'external_plugins': { 'tiny_mce_wiris': 'https://www.wiris.net/demo/plugins/tiny_mce/plugin.js' },
     'toolbar1': '''
             fullscreen preview bold italic underline | fontselect,
             fontsizeselect  | forecolor backcolor | alignleft alignright |
             aligncenter alignjustify | indent outdent | bullist numlist table |
-            | link image media | codesample |
+            | link image media |
             ''',
     'toolbar2': '''
             visualblocks visualchars |
-            charmap hr pagebreak nonbreaking anchor |  code |
+            charmap hr pagebreak nonbreaking anchor |  code | codesample | tiny_mce_wiris_formulaEditor | tiny_mce_wiris_formulaEditorChemistry |
             ''',
     'contextmenu': 'formats | link image',
     }

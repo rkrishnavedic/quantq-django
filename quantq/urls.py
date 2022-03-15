@@ -7,12 +7,15 @@ from django.conf.urls.static import static
 from django.conf import settings
 from articles import views as article_views
 
+from django.contrib import admin
+admin.site.site_header = "QuantQ HQ"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('articles/', include('articles.urls')),
     path('about/', views.about),
-    path('tinymce/', include('tinymce.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', views.homepage, name="home")
 ]
 

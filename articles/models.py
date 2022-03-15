@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
-from tinymce.models import HTMLField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=100);
     slug = models.SlugField();
-    body = HTMLField();
+    body = RichTextField();
     # body = models.TextField();
     date = models.DateTimeField(auto_now_add=True);
     thumbnail = models.ImageField(default='default.png', blank=True)
